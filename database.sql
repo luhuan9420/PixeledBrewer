@@ -5,55 +5,9 @@ DROP TABLE IF EXISTS GAMES;
 /*Create schema for our tables*/
 CREATE TABLE EVENTS(name text, description text, startDate date, private boolean);
 CREATE TABLE BEER(name text, type text, tap boolean, volume decimal);
-CREATE TABLE GAMES(PRIMARY KEY id int, name text, description text);
+CREATE TABLE GAMES(name text, description text);
 /*Populate tables with data*/
 INSERT INTO EVENTS VALUES ("Killer Queen Monday's", "Play the Arcade game Killer Queen for free every Monday", Null, 'False');
-INSERT INTO EVENTS VALUES ("Berry Boarder Battle", "The 1st Annual Berry Border Battle Killer Queen Tournament is here!
-
-Come on out to Pixeled Brewing Co. in Fargo, ND on April 27th at 5pm to compete!
-
-Rules:
-
-5 people per team
-
-TRIPLE elimination bracket! This means you need to lose 3 times to be out.
-
-Each match consists of a best of 3 games. Final 
-bracket is a best of 5 games.
-
-Best of 3 games will consist of rotating maps. (Day, then Dusk, then Water/Night.)
-
-Best of 5 games will consist of rotating maps same as best of 3 games, with Dusk and Water following.
-
-Cost: $5 per person
-
-I bet you're asking yourself, What will the $5 fund? Keep reading!
-
-That $5 will fund custom made Berry Border Battle trophies at the end of the tournament for every person on the winning 1st and 2nd place teams.
-
-What about the rest of the money? It will be donated to Pixeled Brewery to show our appreciation for hosting the tournament!
-
-Self Explanatory Section:
-
-Please be courteous, whether you win or lose. We get it, trash talk is a part of the game, but just don’t let it go too far or get too out of hand. We want to make this as fun and enjoyable as we can, it’s just a game after all.
-
-TEAM SIGN UP:
-
-Each team is limited to 5 players. Have you gotten this far in reading and you don't have a team? Put your name in the "Free Agent" section and a team needing a player will reach out to you!
-
-https://docs.google.com/…/1tLvyLsg9bFRQiLC0vlfKf-1ZHR…/edit…
-
-HOUSING:
-
-What about for the out-of-towners? Where are they going to set up shack for the night if they so wish? Look no further! The first link is a spreadsheet where you can request housing. If you live in the area and would be open to housing some cool players, let them know on the sign up sheet! Are you a baller and want to get a hotel room for the night? Or maybe split a room with some friends? No worries! We reserved a block of rooms at a discounted rate at the Microtel in Moorhead especially for this tournament! The second link will bring you to the discounted room rates. USE THE LINK! That's the only place you'll get the lower rate.
-
-https://docs.google.com/…/1tAJ_SI8e3wMeGreT0UnmGcxN3I…/edit…
-
-https://www.wyndhamhotels.com/…/microtel-moorh…/rooms-rates…#
-
-All that being said, we hope to see you and your team out here to participate!
-
-Form your teams, hone your skills and get ready for an awesome tournament!", '04/27/2019', 'False');
 
 INSERT INTO BEER VALUES ('Galactic Implication', 'New England IPA', 'TRUE', 4.8);
 INSERT INTO BEER VALUES ('Jon Luck Pickard', 'English Strong Bitter', 'TRUE', 5.0);
