@@ -7,6 +7,26 @@
     <title>Pixeled Brewing: Data Modification</title>
 </head>
 <body>
+    <pre>
+    /*Adds a new custom beer to the database*/
+    INSERT INTO BEER VALUES ('BETA-ALE', 'BLonde Ale', FLASE, 7.2);
+
+    /*Adds two new events to the database. One that's private, one that's not*/
+    INSERT INTO EVENTS VALUES ("Half-off Boozeday", "Every Tuesday come try our brews for 50% off!", '19-05-1', False);
+    INSERT INTO EVENTS VALUES ("Birthday Event", "This event is for someone's birthday", '19-05-28', True);
+
+    /*Modifies certain beers to be off tap*/
+    UPDATE BEER
+    SET
+        TAP = FALSE
+    WHERE
+        name = "I am Brut";
     
+        UPDATE BEER
+        SET
+            TAP = FALSE
+        WHERE
+            name = "Jumpman";
+    </pre>
 </body>
 </html>
