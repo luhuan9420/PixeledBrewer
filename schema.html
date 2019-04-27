@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SQL Schema</title>
+    <title>Pixeled Brewing SQL Schema</title>
 </head>
 <body>
-    
+    <h2>SQL Schema</h2>
+    <p>Here are the SQL commands to create the tables in our database.</p>
+    <pre>
+DROP TABLE IF EXISTS EVENTS;
+DROP TABLE IF EXISTS BEER;
+DROP TABLE IF EXISTS GAMES;
+
+CREATE TABLE EVENTS(name text, description text, startDate date, private boolean);
+CREATE TABLE BEER(name text, type text, tap boolean, volume decimal);
+CREATE TABLE GAMES(PRIMARY KEY id int, name text, description text);
+    </pre>
 </body>
 </html>
