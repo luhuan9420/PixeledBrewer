@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pixeled Brewing SQL Interaction: Selection Queries</title>
+</head>
+<body>
+    <h2>SQL Schema</h2>
+    <p>Here are the SQL commands to select specific data in our database.</p>
+    <pre>
+/*Displays all available beers*/
+SELECT *
+FROM BEER
+WHERE tap = true;
++----------------------+-----------------------+------+--------+
+| name                 | type                  | tap  | volume |
++----------------------+-----------------------+------+--------+
+| Galactic Implication | New England IPA       |    1 |      5 |
+| Jon Luck Pickard     | English Strong Bitter |    1 |      5 |
+| I am Brut            | Brut IPA              |    1 |      6 |
+| UpgrayeDD            | Double IPA            |    1 |      7 |
+| Jumpman              | Brown Ale             |    1 |      5 |
+| Tecmo Super Beer     | Blonde Ale            |    1 |      6 |
+| Coin-Op              | Creme Ale             |    1 |      6 |
+| HDS Stout            | Irish Stout           |    1 |      4 |
++----------------------+-----------------------+------+--------+
+
+/*Displays all beers that have a A.B.V. (Alcohol by Volume) greater than 5% */
+SELECT *
+FROM BEER
+WHERE volume > 5 AND tap = true;
++------------------+------------+------+--------+
+| name             | type       | tap  | volume |
++------------------+------------+------+--------+
+| I am Brut        | Brut IPA   |    1 |      6 |
+| UpgrayeDD        | Double IPA |    1 |      7 |
+| Tecmo Super Beer | Blonde Ale |    1 |      6 |
+| Coin-Op          | Creme Ale  |    1 |      6 |
++------------------+------------+------+--------+
+
+/*Displays all games that are described as "Shooter" games*/
+SELECT name
+FROM GAMES
+WHERE description LIKE '%shooter%';
++-------------------------+
+| name                    |
++-------------------------+
+| Darius Burst            |
+| Gauntlet Dark Legacy    |
+| Star Wars Trilogy       |
+| Time Crisis 3           |
+| The house of the Dead 2 |
+| Zaxxon                  |
+| Asteroids Deluxe        |
+| Centipede               |
++-------------------------+
+</pre>
