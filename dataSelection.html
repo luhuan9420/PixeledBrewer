@@ -61,23 +61,55 @@ WHERE description LIKE '%shooter%';
 SELECT name
 FROM BEER
 WHERE type LIKE '%IPA%';
++----------------------+
+| name                 |
++----------------------+
+| Galactic Implication |
+| I am Brut            |
+| UpgrayeDD            |
++----------------------+
 
 /*Displays all sport related game*/
 SELECT name
 FROM GAMES
-WHERE description LIKE (
-    '%hockey%' OR '%basketball%' OR '%football%' OR '%wrestling%' OR '%bowling%' OR '%golf%' OR '%sport%'
-);
+WHERE description LIKE '%hockey%' OR description LIKE '%basketball%' OR description LIKE '%football%'
+OR description LIKE '%wrestling%' OR description LIKE '%bowling%' OR description LIKE '%golf%' OR description LIKE '%sport%';
++------------------------------------+
+| name                               |
++------------------------------------+
+| Super Chexx Bubble Hockey          |
+| NBA Jam                            |
+| NFL Blitz 2000 gold                |
+| Madden Football                    |
+| NBA Showtime                       |
+| WWF Superstars                     |
+| Simpsons Bowling                   |
+| Windjammers                        |
+| Golden Tee 98                      |
+| Roadblasters                       |
+| Track & Field                      |
+| Golden Axe: Revenge of Death Adder |
++------------------------------------+
 
 /*Find all bears that is not available (not on tap)*/
 SELECT name
 FROM beer
 WHERE tap = FALSE;
++-----------+
+| name      |
++-----------+
+| I am Brut |
++-----------+
 
 /*Find all public event at Pixeled Brewling*/
 SELECT name, description, startdate
 FROM EVENTS
 WHERE private = FALSE;
++-----------------------+---------------------------------------------------------+------------+
+| name                  | description                                             | startdate  |
++-----------------------+---------------------------------------------------------+------------+
+| Killer Queen Monday's | Play the Arcade game Killer Queen for free every Monday | 2019-04-29 |
++-----------------------+---------------------------------------------------------+------------+
 
 </pre>
 </body>
