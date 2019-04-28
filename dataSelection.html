@@ -56,6 +56,29 @@ WHERE description LIKE '%shooter%';
 | Asteroids Deluxe        |
 | Centipede               |
 +-------------------------+
+
+/*Displays all IPA (India Pale Ale) type beers*/
+SELECT name
+FROM BEER
+WHERE type LIKE '%IPA%';
+
+/*Displays all sport related game*/
+SELECT name
+FROM GAMES
+WHERE description LIKE (
+    '%hockey%' OR '%basketball%' OR '%football%' OR '%wrestling%' OR '%bowling%' OR '%golf%' OR '%sport%'
+);
+
+/*Find all bears that is not available (not on tap)*/
+SELECT name
+FROM beer
+WHERE tap = FALSE;
+
+/*Find all public event at Pixeled Brewling*/
+SELECT name, description, startdate
+FROM EVENTS
+WHERE private = FALSE;
+
 </pre>
 </body>
 </html>
