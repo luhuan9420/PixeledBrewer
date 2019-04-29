@@ -72,8 +72,8 @@ WHERE type LIKE '%IPA%';
 /*Displays all sport related game*/
 SELECT name
 FROM GAMES
-WHERE description LIKE '%hockey%' OR description LIKE '%basketball%' OR description LIKE '%football%'
-OR description LIKE '%wrestling%' OR description LIKE '%bowling%' OR description LIKE '%golf%' OR description LIKE '%sport%';
+WHERE (description LIKE '%hockey%') OR (description LIKE '%basketball%') OR (description LIKE '%football%')
+OR (description LIKE '%wrestling%') OR (description LIKE '%bowling%') OR (description LIKE '%golf%') OR (description LIKE '%sport%');
 +------------------------------------+
 | name                               |
 +------------------------------------+
