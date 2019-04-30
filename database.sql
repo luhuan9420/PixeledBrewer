@@ -3,9 +3,10 @@ DROP TABLE IF EXISTS EVENTS;
 DROP TABLE IF EXISTS BEER;
 DROP TABLE IF EXISTS GAMES;
 /*Create schema for our tables*/
-CREATE TABLE EVENTS(name text, description text, startDate date, private boolean);
+CREATE TABLE EVENTS(name text, description text, startDate date, privacy boolean);
 CREATE TABLE BEER(name text, type text, tap boolean, volume decimal);
 CREATE TABLE GAMES(name text, description text);
+
 /*Populate tables with data*/
 INSERT INTO EVENTS VALUES ("Killer Queen Monday's", "Play the Arcade game Killer Queen for free every Monday", '19-04-29', False);
 
